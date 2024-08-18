@@ -5,7 +5,7 @@ import "../Chicken.css"
 export default function Chicken() {
     return(
     <>
-        <p className="Chicken">Bock Bock Bock</p>; 
+        <h1 className="Chicken">Bock Bock Bock</h1>
     </>
     ); 
 
