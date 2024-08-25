@@ -9,6 +9,7 @@ import Slots from './components/Slots'
 import InfoFlow from './components/InfoFlow'
 import React, {useState} from 'react'; 
 import PropertyList from "./components/PropertyList"; 
+import Form from "./components/Form"; 
 
 
 
@@ -33,6 +34,7 @@ function App() {
 
   return (
     <div className="App">
+      <Form />
       <PropertyList properties={properties}/>
       {/* <Slots val1="⛩️" val2="⛩️" val3="⛩️"/> */}
       {/* <Slots val1="⛩️" val2="⛩️" val3="👺"/> */}
