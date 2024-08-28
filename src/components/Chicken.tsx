@@ -1,7 +1,7 @@
 import "../Chicken.css"
 
 
-// interfrance 
+// interface 
 export default function Chicken() {
     return(
     <>
