@@ -1,7 +1,7 @@
-export default function DoubleDice(){
-    const num1 = Math.floor(Math.random() * 3) + 1; 
-    const num2 = Math.floor(Math.random() * 3) + 1; 
-    const isWinner = num1 === num2; 
+export default function DoubleDice(): JSX.Element{
+    const num1: number = Math.floor(Math.random() * 3) + 1; 
+    const num2: number = Math.floor(Math.random() * 3) + 1; 
+    const isWinner: boolean = num1 === num2; 
     const styles = { color: isWinner ? "green" : "red" }
     // green if win 
     // red if lose
