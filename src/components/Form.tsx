@@ -1,25 +1,35 @@
-import {useState} from 'react'; 
+import {useState, ChangeEvent, FormEvent} from 'react'; 
+// ChangeEvent and FormEvent are TS types for handling events in react 
+// changeEvent for input fields 
+// FormEvent for submissions 
 
-export default function Form() { 
+export default function Form(): JSX.Element { 
+    // return type of JSX
 
-    const [lastName, setLastName] = useState(""); 
-    const [firstName, setFirstName] = useState(""); 
-    const [city, setCity] = useState(""); 
+    const [lastName, setLastName] = useState<string>('');
+    // <string> sets type of state to string 
+    const [firstName, setFirstName] = useState<string>(''); 
+    const [city, setCity] = useState<string>(''); 
 
-    function handleFirstNameChange(e) { 
+    function handleFirstNameChange(e: ChangeEvent<HTMLInputElement>): void { 
         setFirstName(e.target.value)
     }
 
-    function handleLastNameChange(e) { 
+    function handleLastNameChange(e: ChangeEvent<HTMLInputElement>): void { 
         setLastName(e.target.value)
     }
 
-    function handleCityChange(e) { 
+    function handleCityChange(e: ChangeEvent<HTMLInputElement>): void { 
         setCity(e.target.value)
+    }
+
+    function handleSubmit(e: FormEvent<HTMLFormElement>): void { 
+        e.preventDefault(); 
+        console.log({firstName, lastName, city})
     }
     
     return ( 
-    <form>
+    <form onSubmit={handleSubmit}>
         <input type='text' value={firstName} onChange={handleFirstNameChange}/>
         <input type='text' value={lastName} onChange={handleLastNameChange}/>
         <input type='text' value={city} onChange={handleCityChange}/>

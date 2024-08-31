@@ -25,7 +25,7 @@ function App(): JSX.Element {
  
 
   const person: Person = {
-    firstName: 'John',
+    firstName: 'Tim',
     lastName: 'Doe'
   }
 
@@ -51,6 +51,8 @@ function App(): JSX.Element {
       <DoubleDice/>
       <DoubleDice/>
       <DoubleDice/> */}
+
+      <Form />
       <Greeter person={person}/>
       <Chicken />
       <DoubleDice/>
