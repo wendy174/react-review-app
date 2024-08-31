@@ -14,6 +14,9 @@ export default function Form(): JSX.Element {
     function handleFirstNameChange(e: ChangeEvent<HTMLInputElement>): void { 
         setFirstName(e.target.value)
     }
+    // ChangeEvent is a TypeScript type for change events in HTML elements.
+    // <HTMLInputElement> specifies that this event comes from an HTML input element (like a text field).
+   // e: ChangeEvent<HTMLInputElement>: This means e is an event object that represents a change event from an HTML input element.
 
     function handleLastNameChange(e: ChangeEvent<HTMLInputElement>): void { 
         setLastName(e.target.value)
