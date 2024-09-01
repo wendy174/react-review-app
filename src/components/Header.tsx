@@ -1,3 +1,11 @@
-export default function Header({color = 'olive', text}) { 
-    return <h1 style={{color: color}}>{text}</h1>
+
+// Define props types for Header Component
+
+interface HeaderProps { 
+    text: string; 
+}
+
+
+export default function Header({text}: HeaderProps): JSX.Element { 
+    return <h1>{text}</h1>
 }

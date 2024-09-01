@@ -51,7 +51,7 @@ function App(): JSX.Element {
       <DoubleDice/>
       <DoubleDice/>
       <DoubleDice/> */}
-
+      <Header text="hello world"/>
       <Form />
       <Greeter person={person}/>
       <Chicken />
