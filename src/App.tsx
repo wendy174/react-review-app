@@ -15,11 +15,11 @@ import {useEffect} from 'react';
 
 function App(): JSX.Element {
 
-  // const [selectedItem, setSelectedItem] = useState(null);
+  const [selectedItem, setSelectedItem] = useState<string | null>(null); 
 
-  // function handleSelectedItem(item) { 
-  //   setSelectedItem(item)
-  // }
+  function handleSelectedItem(item: string): void { 
+    setSelectedItem(item)
+  }
 
   //Define interface for person object 
  
@@ -51,6 +51,7 @@ function App(): JSX.Element {
       <DoubleDice/>
       <DoubleDice/>
       <DoubleDice/> */}
+      <InfoFlow onSelectedItem={handleSelectedItem}/>
       <Header text="hello world"/>
       <Form />
       <Greeter person={person}/>
