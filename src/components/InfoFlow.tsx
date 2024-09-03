@@ -1,7 +1,12 @@
-export default function InfoFlow({onSelectedItem}) { 
+interface InfoFlowProps { 
+  onSelectedItem: (item: string) => void; 
+}
+
+
+export default function InfoFlow({onSelectedItem}: InfoFlowProps): JSX.Element { 
     // parent to child --> props 
     // child to parent --> create callback function in parent and send to child components thru props 
-    const items = ["Apple", "Banana", "Orange"];
+    const items: string[] = ["Apple", "Banana", "Orange"];
 
     return (
         <div>
@@ -15,6 +20,4 @@ export default function InfoFlow({onSelectedItem}) {
           </ul>
         </div>
       );
-
-
 }
