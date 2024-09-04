@@ -11,6 +11,7 @@ import React, {useState} from 'react';
 import PropertyList from "./components/PropertyList"; 
 import Form from "./components/Form"; 
 import {useEffect} from 'react'; 
+import PropsExample from './components/PropsExample';
 
 
 function App(): JSX.Element {
@@ -51,6 +52,7 @@ function App(): JSX.Element {
       <DoubleDice/>
       <DoubleDice/>
       <DoubleDice/> */}
+      <PropsExample name='alice' age={30}/>
       <InfoFlow onSelectedItem={handleSelectedItem}/>
       <Header text="hello world"/>
       <Form />
