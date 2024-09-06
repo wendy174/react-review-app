@@ -1,4 +1,10 @@
-export default function Property({name, rating, price}) { 
+interface PropertyProps { 
+    name: string; 
+    rating: number; 
+    price: number; 
+}
+
+export default function Property({name, rating, price}: PropertyProps): JSX.Element { 
 
     return (
     <div>

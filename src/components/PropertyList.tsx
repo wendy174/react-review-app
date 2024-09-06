@@ -1,7 +1,18 @@
 import Property from './Property'; 
 
+interface PropertyItem {
+    id: number;
+    name: string;
+    rating: number;
+    price: number;
+  }
 
-export default function PropertyList({properties}) { 
+  interface PropertyListProps { 
+    properties: PropertyItem[]; 
+  }
+
+
+export default function PropertyList({properties}: PropertyListProps): JSX.Element { 
     return (
         <div>
             {properties.map((property) => (
